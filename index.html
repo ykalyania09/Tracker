@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Canva Tracker Pro — Android Companion</title>
+  
+  <!-- Android PWA Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#10b981">
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkNhbnZhIFRyYWNrZXIgUHJvIFx1MjAxNCBBbmRyb2lkIiwgInNob3J0X25hbWUiOiAiVHJhY2tlclBybyIsICJkZXNjcmlwdGlvbiI6ICJNaW5pbWFsLCBzaGFycCBBbmRyb2lkIGNvbXBhbmlvbiBhcHAgZm9yIHlvdXIgQ2FudmEgdHJhY2tlciIsICJzdGFydF91cmwiOiAiLi9pbmRleC5odG1sIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwNzBhMTIiLCAidGhlbWVfY29sb3IiOiAiIzEwYjk4MSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQVlBQUFCUzNHd0hBQUFGdGtsRVFWUjRuTzNjTVpJVFNSQ0Y0Wm9OTUFnTWJJNkZ3eG53T010Nm5BR0g0MkZnZ0xGMGhGYWhtWkc2TWl2ejFmcy9lMk5ScU4rdmFtbEc4L1QrdzhmZkF6RDFUL1VEQUNvUkFLd1JBS3dSQUt3UkFLd1JBS3dSQUt3UkFLd1JBS3dSQUt3UkFLd1JBS3dSQUt3UkFLeTlxWDRBa2Q1Ky8xTDlFR3o4K3Z5dCtpR0VlRkw5UGdCajcwY3hDcWtBR0wwT2xSZ2tBbUQ0dXJxSDBEb0FocitQcmlHMERJRGg3NnRiQ0swQ1lQZyt1b1RRNXVjQWpOOUxsK3RkZmdKMGVTSlFwL0kwS0QwQkdEL0dxTjFCV1FDTUg1ZXE5bEFTQU9QSExSVzdXQjRBNDhkTFZ1OWphUUNNSC9kWXVaTmxBVEIrUEdMVlhwWUV3UGh4eG9yZHBBZkErREVqZXorcEFUQitSTWpjVVp0ZmhRQXFwQVhBcXo4aVplMHBKUURHand3WnUrSVdDTmJDQStEVkg1bWk5OFVKQUd1aEFmRHFqeFVpZDhZSkFHdGhBZkRxajVXaTlyYlZuMFo4emM5UC8xWS9CQm52Zm55dGZnaExoSHdudVBPclA2T2Yxem1HMmU4VGIzc0NNUHc0eDNQWk9ZU3p0Z3VBNGVmWk1ZVHBOOEdkYm44WS94cWRudWZaL1cxeEFuUzZJQzUyT1Eza2Z3N0ErR3VwUC8vU0FhZy8rYnRRdmc3U0FRQ3pwZ0tvZkFPcy9LcXpvOHJyTWJORHlST0E4ZmVrZUYwa0F3Q2l5QVdnK0NyalJPMzZ5QVVBUkpJS1FPM1Z4WlhTZFpJS0FJaEdBTEFtRTREU3NRcWQ2eVVUQUpDQkFHQ05BR0NOQUdDTkFHQ05BR0NOQUdDTkFHQ05BQXlwZjVFOUVnR1lPY1pQQlA4aEFDUFhveWNDQXJEeDNOamYvZmhxSFFJQllJemhleG9RZ0lGN3grMFlBUUZzN3RGUnUwVkFBQnM3TzJhbjl3VUVzS21JQVR0RVFBQWJpaHF1eXJlNlpoQUFibklZL3hnRXNKMklWMytYOFk5QkFGdHh1R2VQUmdDYjRMNy9IQUxZQU9NL2p3REVNZjQ1QkFEYjhZOUJBTkw0eEdjZUFZamlFNThZQkNDSSsvNDRCQ0NHOGNjaUFDR01QeDRCbUdIOC8wY0FJdmpFSndjQkNPQVRuendFMEJ6My9ia0lvREhHbjQ4QVhsQjU2OEg0MXlDQVoxVCtDVUhHdnc0QjNMRERueEJrL1BjaGdDc3YvUW5CeW44Zk9Ramd3bXZqeXg0bnR6N3JFY0JmMVg4K2tQSFhJSUJSZjl2QitPdllCM0JtZkpIQk1QNWExZ0hNaksvNjFMakUrTSt6RG1CMk9MTVI4QXR1OWF3REdLTXVnazRuaURQN0FNWllId0gzL1gwUXdGK3JJbUQ4dlJEQWhld0lHSDgvQkJBcys5NmU4Y2NpZ0NzUkE3c1ZBWi80OUVRQU4wUkh3Q2MrZlJIQU02SWk0TDYvTndKNFFaZlJkWGtjT3lLQVYxU1ByL3JmM3gwQjNLRnFoSXcvSHdIY2FmVVlHZjhhQlBBQVJya2ZBbmpRaWdnSWJSMENPQ0Z6b0l4L0xRSTRLV09vakg4OUFtaUM4ZGNnZ0FsUm8yWDhkUWhnRXVQVlJnQUJaaUlnb0ZvRUVPVE1rQmwvUFFJSWRNK2dqLytHOGZmd3B2b0I3T1lZOXZXdlFWOE9udkgzUVFCSkdMa0dib0ZnalFCZ2pRQmdqUUJnalFCZ1RTWUEvclNJRnBYckpSTUFrSUVBWUUwcUFKVmoxWjNTZFpJS0FJZ21GNERTcTRzanRlc2pGd0FRU1RJQXRWY1pGNHJYWlNxQVg1Ky9SVDJPaHlrKzJUdXJ2QjR6TzVROEFZQW8wZ0Z3Q3ZTZ2ZCMmtBeGhEKzhuZmdmcnp2OFUzd282THdMZXcxbEVmL21INkJLaDhJM3h0bDR2U1hhZm5lWFovVzV3QWx6Z044blFhZnBUdEFqZ1FRcHdkaDM5NGV2L2g0KytJLzlIYjcxOGkvamVwaU9GK0NxT1B1UDNlOWdTNFJlR2lZcTJ3ajBFN3ZSbkcvcUwySnY5ekFHQkdhQUNjQWxnaGNtZWNBTEFXSGdDbkFESkY3NHNUQU5aU0F1QVVRSWFNWGFXZEFFU0FTRmw3NGhZSTFsSUQ0QlJBaE13ZHBaOEFSSUFaMmZ0WmNndEVCRGhqeFc2V3ZRY2dBanhpMVY2V3Zna21BdHhqNVU2V2Z3cEVCSGpKNm4yVWZBeEtCTGlsWWhkbFB3Y2dBbHlxMmtQcEQ4S0lBR1BVN2lEc084R3pGTDVUakZnZFhnRGIvQ3BFaHljRDYzUzUzbTFPZ0V1Y0J2dnFNdnhEeXdBT2hMQ1Bic00vdEE3Z1FBaTZ1ZzcvSUJIQWdSQjBkQi8rUVNxQVM4VFFqOHJvTDhrR2NBdFJyS000OWx1MkNnQjRWSnVmQXdBVkNBRFdDQURXQ0FEV0NBRFdDQURXQ0FEV0NBRFdDQURXQ0FEV0NBRFdDQURXQ0FEVy9nQlhNZGdwMTB3aXZ3QUFBQUJKUlU1RXJrSmdnZz09IiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBU0tVbEVRVlI0bk8zY01YcmIxaGFGVVRoZlV2aHo0ZHJEU3BNeHBQTlkwbVVNYVR3OEZ5bjhDa2RQc2t4U0JBamczblAyV24xaWlBVHYva25LZnZmaDQ2ZHZDd0FRNVpmUkZ3QUFuRThBQUVBZ0FRQUFnUVFBQUFRU0FBQVFTQUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUFBZ1FRQUFBUVNBQUFRU0FBQVFDQUJBQUNCQkFBQUJCSUFBQkJJQUFCQUlBRUFBSUVFQUFBRUVnQUFFRWdBQUVBZ0FRQUFnWDRkZlFIVTlOcy9mNDYrQk9DRmYvLzRlL1FsVU15N0R4OC9mUnQ5RWN6SHdFTXZBb0hYQkFER0hrS0pnbXdDSUpEQkJ5NFJCRmtFUUFDREQyd2hDSG9UQUUwWmZXQlBZcUFmQWRDSTBRZk9JQVo2RUFERkdYMWdKREZRbHdBb3l2QURNeEVDOVFpQVFvdytVSUVZcUVFQUZHRDRnWXFFd053RXdNUU1QOUNCRUppVEFKaVE0UWM2RWdKekVRQVRNZnhBQWlFd0J3RXdBY01QSkJJQ1kvMHkrZ0xTR1g4Z2xmTnZMSjhBRE9MR0Izam0wNER6Q1lDVEdYNkE2NFRBZVh3RmNDTGpEM0NiYy9JOFBnRTRnUnNhWUQyZkJoekxKd0FITS80QTJ6Zy9qeVVBRHVUbUJYaU1jL1E0dmdJNGdCc1dZSCsrRXRpWFR3QjJadndCanVGODNaY0EySkdiRStCWXp0bjkrQXBnQjI1SWdQUDVTdUF4UGdGNGtQRUhHTVA1K3hnQjhBQTNIOEJZenVIdEJNQkdianFBT1RpUHR4RUFHN2paQU9iaVhGNVBBS3prSmdPWWsvTjVIUUd3Z3BzTFlHN082ZnNKZ0R1NXFRQnFjRjdmUndEY3djMEVVSXR6KzIwQzRBMXVJb0Nhbk4rM0NZQWIzRHdBdFRuSHJ4TUFWN2hwQUhwd25sOG1BQzV3c3dEMDRsei9tUUI0eFUwQzBKUHovVWNDNEFVM0IwQnZ6dmxuQXVBL2JncUFETTc3N3dUQTRtWUFTT1BjRndBQUVDaytBRlFnUUtiMDh6ODZBTktmZklCMHlUc1FHd0RKVHpvQXoxTDNJRFlBQUNCWlpBQ2sxaDRBbHlYdVFsd0FKRDdKQUx3dGJSK2lBaUR0eVFWZ25hU2RpQW9BQU9DN21BQklxam9BdGt2Wmk0Z0FTSGt5QWRoSHdtNUVCQUFBOEtQMkFaQlFjUURzci90K3RBOEFBT0JuclFPZ2U3MEJjS3pPTzlJMkFEby9hUUNjcCt1ZXRBMEFBT0M2bGdIUXRkWUFHS1BqcnJRTUFBRGd0bllCMExIU0FCaXYyNzYwQ3dBQTRHMnRBcUJiblFFd2wwNDcweW9BQUlEN3RBbUFUbFVHd0x5NjdFMmJBQUFBN3RjaUFMclVHQUExZE5pZEZnRUFBS3dqQUFBZ1VQa0E2UEF4REFEMVZOK2Y4Z0VBQUt6MzdzUEhUOTlHWDhSVzFldUw3NzcrL3Rmb1M0QWgzbi81UFBvUzJNRy9mL3c5K2hJMitYWDBCWkRGMk1PelM2OEhVY0JaQkFDSE12aXd6dXZYakNEZ0tHVy9BdkR4Lzd5TVBoeERETXlyNHRjQVBnRmdONFlmanZYMEdoTUM3RUVBOEJDakQrZDcrYm9UQTJ4Vjhpc0FILytQWi9oaExrSmd2R3BmQS9oM0FGak4rTU44dkM1WnkxY0EzTTBCQTNQek93S3NVZTRyQUIvL244L3dRMDFDNEh5VnZnYndGUUEzR1grb3krdVhXd1FBVnprOG9ENnZZNjd4T3dEOHhJRUJ2ZmpkQUM0cDlRbUE3LytQWi95aEw2L3Y0MVhhcVZJQndMRWNEdENmMXpsUEJBRExzamdVSUluWE84c2lBRmdjQnBESTY1NHlBVkRwZTVWS0hBS1F5K3YvR0ZYMnFrd0FzRDh2ZnNBNWtFc0FoUEtpQjU0NER6SUpnRUJlN01CcnpvVThBaUNNRnpsd2pmTWhTNGtBcVBJTEZRQ3dMRFYycTBRQXNBOTFEN3pGT1pGREFJVHdvZ2J1NWJ6SUlBQUNlREVEYXprMytoTUFBQkJJQURTbjRvR3RuQis5Q1FBQUNDUUFHbFB2d0tPY0kzMU5Id0FWL2k3bGpMeG9nYjA0VDdhWmZiK21Ed0FBWUg4Q29DRzFEdXpOdWRLUEFBQ0FRQUlBQUFJSmdHWjhUQWNjeGZuU2l3QUFnRUFDb0JGMURoek5PZE9IQUFDQVFBSUFBQUlKZ0NaOExBZWN4WG5UZ3dBQWdFQUNBQUFDQ1FBQUNDUUFHdkI5SEhBMjUwNTlBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNvRGkvaUFPTTR2eXBUUUFBUUNBQkFBQ0JCQUFBQkJJQUFCQklBQUJBSUFFQUFJRUVBQUFFRWdBQUVFZ0FBRUFnQVFBQWdRUUFBQVFTQUFBUVNBQUFRQ0FCQUFDQkJBQUFCQklBQUJCSUFBQkFJQUVBQUlFRUFBQUVFZ0FBRUVnQUFFQWdBUUN3d2Zzdm4wZGZBanhFQUFDczlEVCtJb0RLQkFEQUNxOUhYd1JRbFFBQXVOTzFzWC8vNWJNUW9Cd0JBTEFURVVBbEFnRGdEdmVPdXdpZ0NnRUE4SWExb3k0Q3FFQUFBTnl3ZGN4RkFMTVRBQUJYUERyaUlvQ1pDUUNBQy9ZYWIzOURnRmtKQUlBVGlBQm1Jd0FBWGpscXJFVUFNeEVBQUM4Y1BkSWlnRmtJQUlEL25EWE9Jb0FaQ0FDQTVmeFI5c3VCakNZQWdIZ2poMWdFTUlvQUFLTE5NTUF6WEFONUJBREFCRVFBWnhNQVFLelpSbmUyNjZFM0FRQkVtblZzWjcwdStoRUFRSnpaUjliZkVPQU1BZ0NJVW1sWUsxMHI5UWdBSUViRlFhMTR6ZFFnQUlBSVZZZjA2KzkvamI0RW1oSUFBSk15L2h4SkFBRHRWWHozYi93NW1nQUFXcXM0L25BR0FRQzBWWFg4dmZ2bkRBSUFhTW40dzIwQ0FHakgrTVBiQkFEQUJJdy9aeE1BUUNzVjMvMGJmMFlRQUVBYkZjY2ZSaEVBUUF0Vng5KzdmMFlSQUVCNXhoL1dFd0JBYWNZZnRoRUFRRm5HSDdZVEFBQW5NdjdNUWdBQUpWVjg5Mi84bVlrQUFNcXBPUDR3R3dFQWxGSjEvTDM3WnpZQ0FDakQrTU4rQkFCUWd2R0hmUWtBWUhyR0gvWW5BQUFPWVB5Wm5RQUFwbGJ4M2IveHB3SUJBRXlyNHZoREZRSUFtRkxWOGZmdW55b0VBREFkNHcvSEV3REFWSXcvbkVNQUFEekkrRk9SQUFDbVVmSGR2L0duS2dFQVRLSGkrRU5sQWdBWXJ1cjRlL2RQWlFJQUdNcjR3eGdDQUJqRytNTTRBZ0FZd3ZqRFdBSUE0RTdHbjA0RUFIQzZpdS8ralQvZENBRGdWQlhISHpvU0FNQnBxbzYvZC85MEpBQ0FVeGgvbUlzQUFBNW4vR0UrQWdBNGxQR0hPUWtBZ0ZlTVB3a0VBSENZaXUvK2pUOHBCQUJ3aUlyakQwa0VBTEM3cXVQdjNUOUpCQUN3SytNUE5RZ0FZRGZHSCtvUUFFQTA0MDhxQVFEc291SzdmK05QTWdGQXRJcWpOU09QSTlRakFJajFORnJHNnpGVkh6L3Yva2tuQUlqMGVyU3FqdGhvVlI4MzR3OENnRER2djN5K09scFZ4MnlVcW8rWDhZZnZCQUF4N2htc3FxTjJ0cXFQay9HSFp3S0FDR3NHcStxNGNadnhoeDhKQU5yYk11Z2k0THFLajQzeGg1OEpBRnFyT0ZZejgzaENId0tBdGg0ZEsyUDNvNnFQaDNmL2NKa0FvSjFidittLzVmOUYzY2ZCK01OMUFvQldqaGlxcXVPM2w2by92L0dIMndRQWJSdzVWRlZIOEZGVmYyN2pEMjhUQUxSd3hsQlZIY00weGgvdUl3QW83OHhoVG9xQWlqK3I4WWY3Q1FESzJ2T1gvZGIrdWQwbC9JeVFUZ0JRMHVpQkd2M25INm5xeitiZFA2d2pBQ2hubG9HYTVUcjJWUFZuTXY2d25nQ2dsTmtHYXJicmVVVFZuOFg0d3pZQ2dESm1IYWhacnl1QjhZZnRCQUFsR05salZYeDhqVDg4UmdBd3RWRy82YjlXaFd1OHB2SzFBOXNKQUtaVmJaaXFYZSt5MUx6bVpmSHVIL1lnQUpoUzFXR3FkTjJWcnZVbDR3LzdFQUJNcWZJaFgyRllLMXpqSlpYdkM1aU5BR0JhbFEvN21RZDI1bXU3cGZMOUFETVNBRXl0OHFGZmRXaG5WUGsrZ0ZrSkFLWlgrZkNmTFFKbXU1NTdWSDcrWVdZQ2dCSXFqOEFzb3p2TGRRQnpFQUNVSVFMcS92bGJWWDdPWVhZQ0FFNHlhb1NOUDNDSkFLQ1U2cU53OWhnYmYrQWFBVUE1eHVFK3hoKzRSUUJRVXVXUnFEck1aNmo4dkVJMUFvQ3lLby9GMFJGUU1USXFQNTlRa1FDZ3RNcWpjZFJJVnh4LzRId0NnUEpFd0hIL3Y3TlVmZzZoS2dGQUM1VUhaSy9STnY3QUdnS0FOaW9QeWFQamJmeUJ0UVFBclZRZWxLb2p2bFhsNXdvNkVBQzBVM2xZdGtSQXhYQ28vQnhCRndLQWxpb1B6SnBCcnpqK3dCd0VBRXpvbm1Hdk92NlY0d3c2RVFDMFZYMW9iZzI4OFFjZUpRQm9yZVBnR0g5Z0R3S0E5aW9Qeit1eE4vN0FYZ1FBRVNvUFVOWFJmMUw1c1lmT0JBQXhLZy9SK3krZlM0WkE1Y2NjdWhNQVJERklBTjhKQU9LSWdITjRuR0Z1QW9CSXh1bFlIbCtZbndBZ2xwRTZoc2NWYWhBQVJETlcrL0o0UWgwQ2dIaEdheDhlUjZoRkFBQVBNLzVRandDQXhZQUJlUVFBL0VjRWJPTnhnNW9FQUx4Z3pOYnhlRUZkQWdCZU1XcjM4VGhCYlFJQUxqQnV0M2w4b0Q0QkFGY1l1Y3M4THRDREFJQWJqQjNRbFFDQU40aUFaeDRMNkVNQXdCME1uOGNBdWhFQWNLZmtBVXorMmFFckFRQXJKQTVoNHM4TUNRUUFjSlh4aDc0RUFLeVVNb29wUHlla0VnQ3dnWEVFcWhNQXNGSG5DT2o4c3dIZkNRQjRRTWVoN1BnekFUOFRBUENnVG9QWjZXY0JiaE1Bc0lNT3c5bmhad0R1SndCZ0o1VUh0UEsxQTlzSUFOaFJ4U0d0ZU0zQTR3UUE3TXlnQWhVSUFEaEFsUWlvY3AzQS9nUUFIR1QyY1ozOStvQmpDUUFJWlB3QkFRQUhtbkZvWjd3bTRId0NBQTQyMCtET2RDM0FXQUlBVG1CNGdka0lBRGpKNkFnWS9lY0RjeEVBY0tKUkkyejhnZGNFQUp6c3JERisrbk9NUDNDSkFJQUJ2djcrMTZIRGJQeUJ0d2dBR09pSWdUYjZ3RDBFQUF5MjUyQWJmK0JldjQ2K0FPQjV1TjkvK2Z6UWZ3OXdMd0VBRTNrNTVHL0ZnTkVISGlFQVlGSUdIamlTM3dFQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQ0syL292eHdFOHl2bFRtd0FBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBR2pBTCtJQVozUHUxQ2NBQUNDUUFBQ0FRQUlBQUFJSmdDWjhId2VjeFhuVGd3QUFnRUFDQUFBQ0NZQkdmQ3dISE0wNTA0Y0FBSUJBQXFBWmRRNGN4Zm5TaXdBQWdFQUNBQUFDQ1lDR2ZFd0g3TTI1MG84QUFJQkEwd2ZBdjMvOFBmb1NTbExyd0Y2Y0o5dk12bC9UQndEYmVkRUNqM0tPOUNVQUFDQ1FBR2hPdlFOYk9UOTZFd0FBRUVnQUJGRHh3RnJPamY0RVFBZ3ZadUJlem9zTUFpQ0lGelh3RnVkRWpoSUJNUHZmcFFTQWx5cnNWb2tBWUQvcUhyakcrWkJGQUFUeUlnZGVjeTdrRVFDaHZOaUJKODZEVEFJZ21CYzk0QnpJVlNZQUt2eENSVVZlL0pETDYvOFlWZmFxVEFCd0hJY0E1UEc2UndDd0xJdkRBSko0dmJNc0FvQVhIQXJRbjljNVQwb0ZRSlh2VlNwek9FQmZYdC9IcTdSVHY0NitBT2J6ZEVoOC9mMnZ3VmNDN01Id2MwbXBUd0E0bDBNRDZ2TTY1aG9Cd0UwT0Q2akw2NWRiM24zNCtPbmI2SXRZNjdkLy9oeDlDWkY4SlFBMUdQNHhLbjMvdnl4K0I0QVYvRzRBek0zd3M0YXZBRmpOSVFQejhicGtyWkpmQVN5THJ3Rm00ZE1BR012d3o2SGF4Ly9MNGlzQUh2VHk4QkVEY0E2anp4NEVBTHZ4T3dKd0xNUFBuc3ArQmJBc3ZnYW9RQXpBWTR6Ky9DcCsvTDhzUGdIZ1lLOFBMMEVBdHhsOHppSUFPTldsdzAwVWtNcllNMUxwcndDV3hkY0FBSXhUOWVQL1pmSHZBQUJBcFBJQlVMbStBS2lyK3Y2VUR3QUFZRDBCQUFDQldnUkE5WTloQUtpbHcrNjBDQUFBWUowMkFkQ2h4Z0NZWDVlOWFSTUFBTUQ5V2dWQWx5b0RZRTZkZHFaVkFBQUE5MmtYQUozcURJQjVkTnVYZGdFQUFMeXRaUUIwcXpRQXh1cTRLeTBEQUFDNHJXMEFkS3cxQU03WGRVL2FCc0N5OUgzU0FEaEg1eDFwSFFBQXdHWHRBNkJ6dlFGd25PNzcwVDRBQUlDZlJRUkE5NG9EWUY4SnV4RVJBTXVTOFdRQzhMaVV2WWdKQUFEZ1dWUUFwRlFkQU5zazdVUlVBQ3hMMXBNTHdQM1M5aUV1QUpZbDcwa0c0TGJFWFlnTUFBQklGeHNBaWJVSHdNOVM5eUEyQUpZbDkwa0g0THZrSFlnT2dHWEpmdklCa3FXZi8vRUJBQUNKQk1DaUFnSFNPUGNGd1ArNUdRQXlPTysvRXdBdnVDa0FlblBPUHhNQXI3ZzVBSHB5dnY5SUFGemdKZ0hveGJuK013RndoWnNGb0FmbitXVUM0QVkzRFVCdHp2SHJCTUFiM0R3QU5UbS9ieE1BZDNBVEFkVGkzSDZiQUxpVG13bWdCdWYxZlFUQUNtNHFnTGs1cCs4bkFGWnljd0hNeWZtOGpnRFl3RTBHTUJmbjhub0NZQ00zRzhBY25NZmJDSUFIdU9rQXhuSU9ieWNBSHVUbUF4akQrZnVZZHg4K2Z2bzIraUs2K08yZlAwZGZBa0I3aG44ZlBnSFlrWnNTNEZqTzJmMElnSjI1T1FHTzRYemRsNjhBRHVRckFZREhHZjVqK0FUZ1FHNWFnTWM0UjQ4akFBN201Z1hZeHZsNUxGOEJuTWhYQWdCdk0vem44QW5BaWR6VUFMYzVKOC9qRTRCQmZCb0E4TXp3bjA4QURDWUVnR1NHZnh4ZkFRem01Z2RTT2YvRzhnbkFSSHdhQUNRdy9ITVFBQk1TQWtCSGhuOHVBbUJpUWdEb3dQRFBTUUFVSUFTQWlnei8zQVJBSVVJQXFNRHcxeUFBaWhJRHdFeU1majBDb0RnaEFJeGsrT3NTQUkySUFlQU1ScjhIQWRDVUdBRDJaUFQ3RVFBQnhBQ3doZEh2VFFBRUVnVEFKUVkvaXdCQUVFQW9nNTlOQUhDUktJQmVqRDJ2Q1FBMkVRZ3dGd1BQV2dJQUFBTDlNdm9DQUlEekNRQUFDQ1FBQUNDUUFBQ0FRQUlBQUFJSkFBQUlKQUFBSUpBQUFJQkFBZ0FBQWdrQUFBZ2tBQUFna0FBQWdFQUNBQUFDQ1FBQUNDUUFBQ0NRQUFDQVFBSUFBQUlKQUFBSUpBQUFJSkFBQUlCQUFnQUFBZ2tBQUFna0FBQWdrQUFBZ0VBQ0FBQUNDUUFBQ0NRQUFDQ1FBQUNBUUFJQUFBSUpBQUFJSkFBQUlKQUFBSUJBQWdBQUFna0FBQWdrQUFBZ2tBQUFnRUFDQUFBQ0NRQUFDUFEvRDZIZDF2cXZQZndBQUFBQVNVVk9SSzVDWUlJPSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn1dLCAiY2F0ZWdvcmllcyI6IFsicHJvZHVjdGl2aXR5IiwgImhlYWx0aCIsICJsaWZlc3R5bGUiXX0=">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Plus Jakarta Sans & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            slateDark: {
+              850: '#0f172a',
+              900: '#0b0f19',
+              950: '#070a12'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    input, textarea {
+      user-select: text;
+    }
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.2);
+      border-radius: 999px;
+    }
+    .phone-mockup-wrapper {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .phone-mockup {
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.75), 0 0 0 12px #181f2c, 0 0 0 14px #2b3648;
+      border-radius: 46px;
+      overflow: hidden;
+    }
+    @media (max-width: 640px) {
+      .phone-mockup {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        border: none !important;
+      }
+    }
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom, 16px);
+    }
+  </style>
+</head>
+<body class="bg-[#070a12] text-slate-100 font-sans antialiased min-h-screen selection:bg-emerald-500/20 selection:text-emerald-300">
+
+  <!-- Desktop Utility Bar (Controls when viewed on desktop) -->
+  <header class="hidden md:flex items-center justify-between px-6 py-3 border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+        <svg class="w-4 h-4 text-slate-950 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      </div>
+      <div>
+        <h1 class="text-sm font-bold tracking-tight text-white flex items-center gap-2">
+          TrackerFlow <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">ANDROID PWA</span>
+        </h1>
+        <p class="text-[11px] text-slate-400">Android companion app for your Canva tracker</p>
+      </div>
+    </div>
+
+    <!-- Viewport Mode & Quick Controls -->
+    <div class="flex items-center gap-3">
+      <div class="bg-slate-800/80 p-0.5 rounded-lg border border-slate-700/60 flex items-center text-xs">
+        <button id="btnViewPhone" class="px-3 py-1.5 rounded-md font-medium text-emerald-400 bg-slate-900 shadow-sm flex items-center gap-1.5 transition-all">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          Android Phone View
+        </button>
+        <button id="btnViewFluid" class="px-3 py-1.5 rounded-md font-medium text-slate-400 hover:text-slate-200 flex items-center gap-1.5 transition-all">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          Full Screen
+        </button>
+      </div>
+
+      <div class="h-4 w-px bg-slate-800"></div>
+
+      <button id="btnAndroidInstallTop" class="text-xs bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 px-3 py-1.5 rounded-lg border border-emerald-500/30 flex items-center gap-1.5 transition-all font-semibold">
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9964-3.4578c.115-.1992.0466-.4548-.1526-.5698-.1993-.1151-.4548-.0466-.5699.1526l-2.0232 3.5042c-1.4729-.6721-3.1118-1.0457-4.8822-1.0457s-3.4093.3736-4.8822 1.0457L5.3458 5.4467c-.1151-.1992-.3706-.2677-.5699-.1526-.1992.115-.2676.3706-.1526.5698l1.9964 3.4578C3.1257 11.0152 1 14.2818 1 18.0664h22c0-3.7846-2.1257-7.0512-5.1185-8.745"></path></svg>
+        Install on Android
+      </button>
+
+      <button id="btnQuickExportTop" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white px-3 py-1.5 rounded-lg border border-slate-700/60 flex items-center gap-1.5 transition-all">
+        <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        Export CSV
+      </button>
+
+      <button id="btnThemeToggle" class="p-2 text-slate-400 hover:text-white bg-slate-800/80 rounded-lg border border-slate-700/60 transition-colors" title="Toggle Sound/Audio">
+        <svg id="soundIconOn" class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="w-full flex items-center justify-center p-0 md:py-8 min-h-[calc(100vh-60px)]">
+    
+    <!-- Phone Mockup Container (Responsive Frame) -->
+    <div id="appContainer" class="phone-mockup-wrapper w-full max-w-md mx-auto transition-all duration-300">
+      <div id="phoneShell" class="phone-mockup bg-slate-900 border border-slate-800 flex flex-col h-[100dvh] md:h-[844px] relative overflow-hidden text-slate-100">
+        
+        <!-- Android Status Bar & Punch-hole Camera Simulation -->
+        <div class="pt-2.5 pb-2 px-5 flex items-center justify-between text-xs font-mono text-slate-400 bg-slate-900/95 backdrop-blur border-b border-slate-800/60 z-30 select-none">
+          <span id="liveClock" class="font-semibold text-slate-200">09:41</span>
+          <!-- Camera Punch Hole -->
+          <div class="w-3.5 h-3.5 bg-black rounded-full border border-slate-800 flex items-center justify-center shadow-inner">
+            <div class="w-1.5 h-1.5 rounded-full bg-slate-800"></div>
+          </div>
+          <div class="flex items-center gap-1.5 text-slate-400">
+            <span class="text-[10px] text-emerald-400 font-bold tracking-tight">5G</span>
+            <!-- Android Signal Bars SVG -->
+            <svg class="w-3 h-3 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><path d="M2 22h20V2L2 22z"/></svg>
+            <!-- Battery SVG -->
+            <div class="w-4 h-2 rounded-[2px] border border-slate-400 p-[1px] flex items-center">
+              <div class="h-full w-4/5 bg-emerald-400 rounded-[1px]"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scrollable App Content Area -->
+        <div id="scrollContainer" class="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 pb-24">
+          
+          <!-- TAB 1: TODAY (DEFAULT VIEW) -->
+          <section id="tabToday" class="space-y-4">
+            
+            <!-- Android PWA Quick Install Banner (Mobile view) -->
+            <div id="androidBanner" class="bg-gradient-to-r from-emerald-950/40 via-slate-850 to-slate-900 p-3 rounded-2xl border border-emerald-500/30 flex items-center justify-between shadow-sm">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9964-3.4578c.115-.1992.0466-.4548-.1526-.5698-.1993-.1151-.4548-.0466-.5699.1526l-2.0232 3.5042c-1.4729-.6721-3.1118-1.0457-4.8822-1.0457s-3.4093.3736-4.8822 1.0457L5.3458 5.4467c-.1151-.1992-.3706-.2677-.5699-.1526-.1992.115-.2676.3706-.1526.5698l1.9964 3.4578C3.1257 11.0152 1 14.2818 1 18.0664h22c0-3.7846-2.1257-7.0512-5.1185-8.745"></path></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-white leading-tight">Install on Android</p>
+                  <p class="text-[10px] text-slate-400">Add to home screen for full native feel</p>
+                </div>
+              </div>
+              <button id="btnTriggerAndroidInstall" class="px-2.5 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-[11px] rounded-xl transition-all shadow">
+                Install
+              </button>
+            </div>
+
+            <!-- Header Banner & Quick Date Selector -->
+            <div class="bg-gradient-to-br from-slate-850 to-slate-900 p-4 rounded-2xl border border-slate-800 shadow-sm relative overflow-hidden">
+              <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+              
+              <div class="flex items-center justify-between mb-3">
+                <div>
+                  <p id="currentDayGreeting" class="text-[10px] uppercase font-bold tracking-widest text-emerald-400">ANDROID COMPANION</p>
+                  <h2 id="currentFormattedDate" class="text-xl font-bold text-white tracking-tight">Today</h2>
+                </div>
+                <button id="btnTodayResetModal" class="p-2 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700/60 text-slate-300 hover:text-white transition-colors" title="Manage Tracker">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                </button>
+              </div>
+
+              <!-- Mini Weekday Strip -->
+              <div id="weekDayStrip" class="grid grid-cols-7 gap-1 pt-1">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <!-- Overall Daily Completion Ring / Card -->
+            <div class="bg-slate-850/80 rounded-2xl p-4 border border-slate-800 flex items-center justify-between">
+              <div>
+                <p class="text-xs text-slate-400 font-medium">Daily Completion</p>
+                <div class="flex items-baseline gap-2 mt-0.5">
+                  <span id="progressPercentText" class="text-2xl font-black text-white font-mono">0%</span>
+                  <span id="progressRatioText" class="text-xs text-emerald-400 font-mono">0 / 0 completed</span>
+                </div>
+                <div class="mt-2.5 w-48 h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <div id="progressBarFill" class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-500 rounded-full" style="width: 0%"></div>
+                </div>
+              </div>
+              <div class="relative w-14 h-14 flex items-center justify-center">
+                <svg class="w-14 h-14 transform -rotate-90">
+                  <circle cx="28" cy="28" r="24" stroke="currentColor" stroke-width="4.5" class="text-slate-800" fill="transparent" />
+                  <circle id="progressCircleSvg" cx="28" cy="28" r="24" stroke="currentColor" stroke-width="4.5" class="text-emerald-400 transition-all duration-500" stroke-linecap="round" fill="transparent" stroke-dasharray="150.79" stroke-dashoffset="150.79" />
+                </svg>
+                <span id="streakBadge" class="absolute text-[11px] font-bold text-emerald-400 flex items-center">
+                  🔥<span id="currentStreakNum">0</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Quick Metrics / Numeric Steppers (Water, Workout, Deep Work, Reading) -->
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Quick Numeric Counters
+                </h3>
+                <span class="text-[11px] text-slate-500">Tap +/- to log</span>
+              </div>
+              
+              <div id="metricsGrid" class="grid grid-cols-2 gap-2.5">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Habits & Checklist (The Core Canva Tracker conversion) -->
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Habits & Routines
+                </h3>
+                <button id="btnOpenAddHabit" class="text-[11px] font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
+                  + Add Item
+                </button>
+              </div>
+
+              <div id="habitsList" class="space-y-2">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Priority Tasks / Focus of the Day -->
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Priorities & Tasks
+                </h3>
+                <span id="taskCountBadge" class="text-[11px] text-slate-500 font-mono">0 pending</span>
+              </div>
+
+              <!-- Quick Task Input -->
+              <form id="formAddTask" class="flex gap-2 mb-2">
+                <input id="inputNewTask" type="text" placeholder="Add a priority for today..." class="flex-1 bg-slate-850 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500/80 transition-colors">
+                <button type="submit" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-3 py-2 rounded-xl text-xs transition-colors flex items-center">
+                  Add
+                </button>
+              </form>
+
+              <div id="tasksList" class="space-y-1.5">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Daily Reflection / Quick Notes -->
+            <div class="bg-slate-850/80 rounded-2xl p-3.5 border border-slate-800">
+              <div class="flex items-center justify-between mb-2">
+                <label for="dailyNoteTextarea" class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                  <span>📝</span> Daily Reflection / Notes
+                </label>
+                <span id="noteSavedIndicator" class="text-[10px] text-emerald-400 opacity-0 transition-opacity font-mono">Saved</span>
+              </div>
+              <textarea id="dailyNoteTextarea" rows="2" placeholder="Wins, gratitude, or notes for your Canva log..." class="w-full bg-slate-900 border border-slate-800/80 rounded-xl p-2.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500/60 resize-none transition-colors"></textarea>
+            </div>
+
+          </section>
+
+          <!-- TAB 2: ANALYTICS & WEEKLY MATRIX -->
+          <section id="tabAnalytics" class="space-y-4 hidden">
+            <div class="bg-slate-850/90 rounded-2xl p-4 border border-slate-800">
+              <h2 class="text-sm font-bold text-white mb-1">Weekly Consistency Trend</h2>
+              <p class="text-[11px] text-slate-400 mb-4">Past 7 days completion rate</p>
+              <div class="relative h-48 w-full">
+                <canvas id="weeklyChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Habit Streaks Leaderboard -->
+            <div class="bg-slate-850/90 rounded-2xl p-4 border border-slate-800">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
+                <span>🔥</span> Top Streaks Leaderboard
+              </h3>
+              <div id="streaksContainer" class="space-y-2">
+                <!-- Populated via JS -->
+              </div>
+            </div>
+
+            <!-- Canva Visual Sync Preview Card -->
+            <div class="bg-gradient-to-br from-indigo-950/40 to-slate-900 p-4 rounded-2xl border border-indigo-500/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-indigo-400">Canva 2-Way Sync Bridge</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 font-mono">Ready to Copy</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                Summarized stats formatted to paste directly into your Canva design text boxes or export as report:
+              </p>
+              <div id="canvaSummaryBox" class="bg-slate-900/90 rounded-xl p-3 border border-slate-800 font-mono text-[11px] text-slate-300 whitespace-pre-wrap select-all">
+                Loading summary...
+              </div>
+              <button id="btnCopyCanvaSummary" class="mt-3 w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-xs rounded-xl transition-colors flex items-center justify-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy Canva Sync Stats
+              </button>
+            </div>
+          </section>
+
+          <!-- TAB 3: CUSTOMIZE / PRESETS -->
+          <section id="tabCustomize" class="space-y-4 hidden">
+            <div class="bg-slate-850/90 rounded-2xl p-4 border border-slate-800">
+              <h2 class="text-sm font-bold text-white mb-1">Tracker Layout & Presets</h2>
+              <p class="text-[11px] text-slate-400 mb-3">Load preset tracker templates matching popular Canva formats</p>
+              
+              <div class="grid grid-cols-2 gap-2 mb-4">
+                <button data-preset="wellness" class="preset-btn p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-left transition-all">
+                  <span class="text-base">🧘</span>
+                  <p class="text-xs font-bold text-white mt-1">Wellness & Health</p>
+                  <p class="text-[10px] text-slate-400">Water, gym, sleep, meditation</p>
+                </button>
+                <button data-preset="productivity" class="preset-btn p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-left transition-all">
+                  <span class="text-base">🚀</span>
+                  <p class="text-xs font-bold text-white mt-1">Deep Work & Hustle</p>
+                  <p class="text-[10px] text-slate-400">Focus, code, reading, tasks</p>
+                </button>
+                <button data-preset="academic" class="preset-btn p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-left transition-all">
+                  <span class="text-base">📚</span>
+                  <p class="text-xs font-bold text-white mt-1">Study & Learning</p>
+                  <p class="text-[10px] text-slate-400">Chapters, revision, flashcards</p>
+                </button>
+                <button data-preset="minimal" class="preset-btn p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-left transition-all">
+                  <span class="text-base">⚡</span>
+                  <p class="text-xs font-bold text-white mt-1">Ultra Minimal</p>
+                  <p class="text-[10px] text-slate-400">3 core habits + 3 tasks</p>
+                </button>
+              </div>
+
+              <!-- Habit Management List -->
+              <div class="border-t border-slate-800 pt-3">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-xs font-bold text-slate-300">Active Habits & Steppers</h3>
+                  <button id="btnOpenNewItemSheet" class="text-xs text-emerald-400 font-semibold hover:underline">+ New Habit</button>
+                </div>
+                <div id="manageItemsList" class="space-y-1.5 max-h-56 overflow-y-auto pr-1">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TAB 4: UPGRADE OPTIONS & ANDROID CONFIG -->
+          <section id="tabSettings" class="space-y-4 hidden">
+            
+            <!-- Android Phone Install Guide Card -->
+            <div class="bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 rounded-2xl p-4 border border-emerald-500/30">
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs">🤖</div>
+                  <h2 class="text-sm font-bold text-white">Android Phone Setup</h2>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Chrome PWA</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                How to open and update your tracker from anywhere on your Android phone:
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-300 font-mono">
+                <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800 flex items-start gap-2">
+                  <span class="text-emerald-400 font-bold">1.</span>
+                  <span>Open this URL in <strong>Google Chrome</strong> on your Android phone.</span>
+                </div>
+                <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800 flex items-start gap-2">
+                  <span class="text-emerald-400 font-bold">2.</span>
+                  <span>Tap Chrome's <strong>Three Dots Menu (⋮)</strong> at top right.</span>
+                </div>
+                <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800 flex items-start gap-2">
+                  <span class="text-emerald-400 font-bold">3.</span>
+                  <span>Select <strong>"Install app"</strong> or <strong>"Add to Home screen"</strong>.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Software Architecture & Upgrades Card -->
+            <div class="bg-slate-850/90 rounded-2xl p-4 border border-slate-800">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-6 h-6 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400 text-xs">⚡</div>
+                <h2 class="text-sm font-bold text-white">System Upgrades Roadmap</h2>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                Options to scale your tracker into a full cloud-synchronized ecosystem:
+              </p>
+
+              <div class="space-y-2 text-xs">
+                <!-- Upgrade 1 -->
+                <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+                  <div class="flex items-center justify-between font-bold text-white mb-1">
+                    <span class="flex items-center gap-1.5"><span class="text-emerald-400">1.</span> Google Sheets Auto-Sync</span>
+                    <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-mono">Free Cloud DB</span>
+                  </div>
+                  <p class="text-slate-400 text-[11px] leading-normal">
+                    Sync daily check-ins to a Google Sheet via Apps Script. Canva can link to Google Sheets via <strong>Bulk Create</strong> to update your design graphics automatically.
+                  </p>
+                </div>
+
+                <!-- Upgrade 2 -->
+                <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+                  <div class="flex items-center justify-between font-bold text-white mb-1">
+                    <span class="flex items-center gap-1.5"><span class="text-cyan-400">2.</span> Native Android APK (Capacitor)</span>
+                    <span class="text-[10px] text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded font-mono">Stand-alone App</span>
+                  </div>
+                  <p class="text-slate-400 text-[11px] leading-normal">
+                    Package with Capacitor into a standalone Android `.apk` for Google Play, with native home-screen widgets, lock screen glanceables, and biometric security.
+                  </p>
+                </div>
+
+                <!-- Upgrade 3 -->
+                <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+                  <div class="flex items-center justify-between font-bold text-white mb-1">
+                    <span class="flex items-center gap-1.5"><span class="text-purple-400">3.</span> Cloud Auth & Multi-Device Sync</span>
+                    <span class="text-[10px] text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded font-mono">Supabase</span>
+                  </div>
+                  <p class="text-slate-400 text-[11px] leading-normal">
+                    Connect Supabase PostgreSQL backend for instant live sync between your Android phone, tablet, and laptop with zero data loss.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Webhook Cloud Sync URL Field -->
+            <div class="bg-slate-850/90 rounded-2xl p-4 border border-slate-800">
+              <h3 class="text-xs font-bold text-white mb-1">Cloud Sync Webhook (Optional)</h3>
+              <p class="text-[11px] text-slate-400 mb-2.5">Send updates automatically to your backend or spreadsheet endpoint</p>
+              <div class="flex gap-2">
+                <input id="inputWebhookUrl" type="url" placeholder="https://script.google.com/macros/s/.../exec" class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 placeholder-slate-600 focus:outline-none focus:border-emerald-500">
+                <button id="btnSaveWebhook" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-3 py-2 rounded-xl text-xs transition-colors">
+                  Save
+                </button>
+              </div>
+            </div>
+
+            <!-- Data Management & Backup -->
+            <div class="bg-slate-850/90 rounded-2xl p-4 border border-slate-800">
+              <h3 class="text-xs font-bold text-white mb-2">Data & Local Storage</h3>
+              <div class="grid grid-cols-2 gap-2">
+                <button id="btnExportJSON" class="py-2.5 px-3 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/60 rounded-xl text-xs font-medium flex items-center justify-center gap-1.5 transition-colors">
+                  <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  Export JSON
+                </button>
+                <button id="btnExportCSV" class="py-2.5 px-3 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/60 rounded-xl text-xs font-medium flex items-center justify-center gap-1.5 transition-colors">
+                  <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  Export CSV
+                </button>
+              </div>
+
+              <button id="btnResetAllData" class="mt-3 w-full py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 text-xs font-medium rounded-xl transition-colors">
+                Reset All Tracking Data
+              </button>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Android Floating Action Button (FAB) for Quick Add -->
+        <button id="btnAndroidFab" class="absolute right-5 bottom-16 w-12 h-12 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-xl shadow-emerald-500/30 flex items-center justify-center font-black text-xl z-30 transition-transform active:scale-90" title="Quick Add">
+          +
+        </button>
+
+        <!-- Android Bottom Navigation Bar (Dock) -->
+        <nav class="absolute bottom-0 inset-x-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-800/80 px-4 py-2 z-40 safe-bottom">
+          <div class="flex items-center justify-around">
+            <button data-tab="tabToday" class="nav-btn flex flex-col items-center gap-1 text-emerald-400 py-1 px-3 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+              <span class="text-[10px] font-semibold">Today</span>
+            </button>
+            <button data-tab="tabAnalytics" class="nav-btn flex flex-col items-center gap-1 text-slate-400 hover:text-slate-200 py-1 px-3 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              <span class="text-[10px] font-semibold">Analytics</span>
+            </button>
+            <button data-tab="tabCustomize" class="nav-btn flex flex-col items-center gap-1 text-slate-400 hover:text-slate-200 py-1 px-3 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+              <span class="text-[10px] font-semibold">Customize</span>
+            </button>
+            <button data-tab="tabSettings" class="nav-btn flex flex-col items-center gap-1 text-slate-400 hover:text-slate-200 py-1 px-3 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <span class="text-[10px] font-semibold">Android Setup</span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Android Gesture Navigation Bar -->
+        <div class="absolute bottom-1 inset-x-0 flex justify-center pointer-events-none z-50">
+          <div class="w-24 h-1 bg-slate-500/50 rounded-full"></div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL: ADD / EDIT HABIT -->
+  <div id="modalAddHabit" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5 w-full max-w-sm shadow-2xl relative">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-sm font-bold text-white">Add New Habit</h3>
+        <button id="btnCloseAddHabit" class="p-1 rounded-lg text-slate-400 hover:text-white">✕</button>
+      </div>
+
+      <form id="formAddHabit" class="space-y-3">
+        <div>
+          <label class="block text-[11px] font-medium text-slate-400 mb-1">Habit Title</label>
+          <input id="inputHabitTitle" type="text" placeholder="e.g. Morning Workout" required class="w-full bg-slate-850 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-[11px] font-medium text-slate-400 mb-1">Emoji / Icon</label>
+            <input id="inputHabitEmoji" type="text" value="✨" maxlength="2" class="w-full bg-slate-850 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white text-center focus:outline-none focus:border-emerald-500">
+          </div>
+          <div>
+            <label class="block text-[11px] font-medium text-slate-400 mb-1">Category</label>
+            <select id="selectHabitCategory" class="w-full bg-slate-850 border border-slate-800 rounded-xl px-2.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500">
+              <option value="Health">Health</option>
+              <option value="Mind">Mind</option>
+              <option value="Productivity">Productivity</option>
+              <option value="Routine">Routine</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-xl text-xs transition-colors mt-2">
+          Save Habit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ANDROID INSTALL GUIDE -->
+  <div id="modalAndroidInstall" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-emerald-500/30 rounded-3xl p-5 w-full max-w-sm shadow-2xl relative">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm font-bold">🤖</div>
+          <h3 class="text-sm font-bold text-white">Install on Android</h3>
+        </div>
+        <button id="btnCloseAndroidModal" class="p-1 rounded-lg text-slate-400 hover:text-white">✕</button>
+      </div>
+
+      <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+        You can run this tracker directly as a native Android app with an icon on your phone home screen:
+      </p>
+
+      <div class="space-y-2 mb-4 text-xs font-mono">
+        <div class="bg-slate-850 p-2.5 rounded-xl border border-slate-800 flex items-center gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">1</span>
+          <span class="text-slate-200">Open in Chrome on Android</span>
+        </div>
+        <div class="bg-slate-850 p-2.5 rounded-xl border border-slate-800 flex items-center gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">2</span>
+          <span class="text-slate-200">Tap Three Dots (⋮) at top right</span>
+        </div>
+        <div class="bg-slate-850 p-2.5 rounded-xl border border-slate-800 flex items-center gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">3</span>
+          <span class="text-slate-200">Tap "Install app" / "Add to Home screen"</span>
+        </div>
+      </div>
+
+      <button id="btnDismissAndroidModal" class="w-full py-2.5 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-xl text-xs transition-colors">
+        Got It
+      </button>
+    </div>
+  </div>
+
+  <!-- IN-PAGE CONFIRM MODAL -->
+  <div id="modalConfirm" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 w-full max-w-xs shadow-2xl text-center">
+      <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-400 mx-auto flex items-center justify-center text-lg mb-3">⚠️</div>
+      <h4 id="confirmModalTitle" class="text-sm font-bold text-white mb-1">Confirm Action</h4>
+      <p id="confirmModalDesc" class="text-xs text-slate-400 mb-4">Are you sure you want to proceed?</p>
+      <div class="flex gap-2">
+        <button id="btnCancelConfirm" class="flex-1 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs font-medium transition-colors">Cancel</button>
+        <button id="btnProceedConfirm" class="flex-1 py-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-xl text-xs transition-colors">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- IN-PAGE TOAST NOTIFICATION -->
+  <div id="toastNotification" class="fixed top-4 inset-x-0 mx-auto max-w-xs bg-slate-800 text-white text-xs px-4 py-2.5 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center justify-between pointer-events-none opacity-0 -translate-y-4 transition-all duration-300 z-50">
+    <span id="toastMessage">Notification message</span>
+    <span class="text-emerald-400 font-bold ml-2">✓</span>
+  </div>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    const STORAGE_KEY = 'canva_tracker_pro_v1';
+    
+    // Default Tracker Configuration
+    const DEFAULT_DATA = {
+      habits: [
+        { id: 'h1', title: 'Wake up at 6:00 AM', emoji: '⏰', category: 'Routine' },
+        { id: 'h2', title: 'Drink 500ml Lemon Water', emoji: '💧', category: 'Health' },
+        { id: 'h3', title: '30-Min Workout / Cardio', emoji: '🏃‍♂️', category: 'Health' },
+        { id: 'h4', title: '20-Min Reading / Book', emoji: '📖', category: 'Mind' },
+        { id: 'h5', title: 'Plan Canva / Project Work', emoji: '🎯', category: 'Productivity' },
+        { id: 'h6', title: 'Zero Sugar / Clean Diet', emoji: '🥗', category: 'Health' },
+        { id: 'h7', title: 'Night Reflection & Journal', emoji: '🌙', category: 'Mind' }
+      ],
+      metrics: [
+        { id: 'm1', name: 'Water Intake', emoji: '💧', unit: 'Glasses', val: 6, target: 8, step: 1 },
+        { id: 'm2', name: 'Deep Work', emoji: '⚡', unit: 'Hours', val: 3.5, target: 4.0, step: 0.5 },
+        { id: 'm3', name: 'Steps', emoji: '👟', unit: 'k-Steps', val: 7.2, target: 10.0, step: 0.5 },
+        { id: 'm4', name: 'Reading', emoji: '📑', unit: 'Pages', val: 18, target: 20, step: 2 }
+      ],
+      tasks: [
+        { id: 't1', title: 'Update Canva tracker visual banner', done: false, priority: 'high' },
+        { id: 't2', title: 'Export weekly statistics', done: true, priority: 'medium' }
+      ],
+      history: {},
+      notes: {},
+      webhookUrl: '',
+      soundEnabled: true
+    };
+
+    let appState = loadState();
+    let selectedDate = getTodayString();
+    let weeklyChartInstance = null;
+    let deferredPrompt = null;
+
+    function getTodayString() {
+      const d = new Date();
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          return { ...DEFAULT_DATA, ...parsed };
+        }
+      } catch (e) {
+        console.warn('Storage unavailable:', e);
+      }
+      return JSON.parse(JSON.stringify(DEFAULT_DATA));
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      } catch (e) {
+        console.warn('Save failed:', e);
+      }
+      triggerCloudSync();
+    }
+
+    // Android Haptic Vibration + Audio Chime
+    function triggerHapticAndAudio(success = true) {
+      // Native Android vibration API
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        try {
+          navigator.vibrate(success ? 15 : [20, 40, 20]);
+        } catch(e) {}
+      }
+      
+      if (!appState.soundEnabled) return;
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        if (success) {
+          osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(783.99, ctx.currentTime + 0.12);
+        } else {
+          osc.frequency.setValueAtTime(329.63, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(261.63, ctx.currentTime + 0.12);
+        }
+        gain.gain.setValueAtTime(0.08, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.14);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.15);
+      } catch (e) {}
+    }
+
+    let confirmCallback = null;
+    function openConfirmDialog(title, desc, onConfirm, isDanger = false) {
+      document.getElementById('confirmModalTitle').textContent = title;
+      document.getElementById('confirmModalDesc').textContent = desc;
+      const proceedBtn = document.getElementById('btnProceedConfirm');
+      if (isDanger) {
+        proceedBtn.className = 'flex-1 py-2 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl text-xs transition-colors';
+      } else {
+        proceedBtn.className = 'flex-1 py-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-xl text-xs transition-colors';
+      }
+      confirmCallback = onConfirm;
+      document.getElementById('modalConfirm').classList.remove('hidden');
+    }
+
+    document.getElementById('btnCancelConfirm').addEventListener('click', () => {
+      document.getElementById('modalConfirm').classList.add('hidden');
+      confirmCallback = null;
+    });
+
+    document.getElementById('btnProceedConfirm').addEventListener('click', () => {
+      document.getElementById('modalConfirm').classList.add('hidden');
+      if (typeof confirmCallback === 'function') {
+        confirmCallback();
+      }
+      confirmCallback = null;
+    });
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const msgEl = document.getElementById('toastMessage');
+      msgEl.textContent = msg;
+      toast.classList.remove('opacity-0', '-translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', '-translate-y-4');
+      }, 2200);
+    }
+
+    function renderWeekStrip() {
+      const strip = document.getElementById('weekDayStrip');
+      strip.innerHTML = '';
+      const curr = new Date();
+      const days = [];
+      for (let i = -3; i <= 3; i++) {
+        const d = new Date(curr);
+        d.setDate(curr.getDate() + i);
+        days.push(d);
+      }
+
+      days.forEach(d => {
+        const dateStr = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        const dayLetter = d.toLocaleDateString('en-US', { weekday: 'narrow' });
+        const dayNum = d.getDate();
+        const isSelected = dateStr === selectedDate;
+        const isToday = dateStr === getTodayString();
+
+        const btn = document.createElement('button');
+        btn.className = `flex flex-col items-center py-1.5 rounded-xl text-center transition-all ${
+          isSelected 
+            ? 'bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20' 
+            : isToday 
+              ? 'bg-slate-800 text-emerald-400 font-semibold border border-emerald-500/30' 
+              : 'hover:bg-slate-800/60 text-slate-400'
+        }`;
+        btn.innerHTML = `
+          <span class="text-[9px] uppercase font-mono">${dayLetter}</span>
+          <span class="text-xs ${isSelected ? 'text-slate-950' : 'text-slate-200'} font-bold mt-0.5">${dayNum}</span>
+        `;
+        btn.addEventListener('click', () => {
+          selectedDate = dateStr;
+          renderWeekStrip();
+          renderAll();
+        });
+        strip.appendChild(btn);
+      });
+
+      const dObj = new Date(selectedDate + 'T00:00:00');
+      const isToday = selectedDate === getTodayString();
+      document.getElementById('currentFormattedDate').textContent = isToday 
+        ? `Today, ${dObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`
+        : dObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+    }
+
+    function renderHabits() {
+      const container = document.getElementById('habitsList');
+      container.innerHTML = '';
+
+      if (!appState.history[selectedDate]) {
+        appState.history[selectedDate] = {};
+      }
+      const dayLogs = appState.history[selectedDate];
+
+      if (appState.habits.length === 0) {
+        container.innerHTML = `<div class="p-4 text-center text-xs text-slate-500">No habits added yet. Click "+ Add Item" above!</div>`;
+        return;
+      }
+
+      appState.habits.forEach(h => {
+        const isDone = !!dayLogs[h.id];
+        const streak = calculateHabitStreak(h.id);
+
+        const card = document.createElement('div');
+        card.className = `p-3 rounded-xl border transition-all flex items-center justify-between cursor-pointer active:scale-[0.98] ${
+          isDone 
+            ? 'bg-emerald-950/20 border-emerald-500/40 text-slate-100' 
+            : 'bg-slate-850/80 hover:bg-slate-800/80 border-slate-800 text-slate-300'
+        }`;
+
+        card.innerHTML = `
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg ${isDone ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-800 text-slate-300'} flex items-center justify-center text-sm">
+              ${h.emoji || '⚡'}
+            </div>
+            <div>
+              <p class="text-xs font-semibold ${isDone ? 'line-through text-slate-400' : 'text-slate-100'}">${escapeHtml(h.title)}</p>
+              <div class="flex items-center gap-2 mt-0.5">
+                <span class="text-[10px] text-slate-400 font-mono">${h.category || 'General'}</span>
+                <span class="text-[10px] font-mono text-emerald-400">🔥 ${streak}d streak</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-6 h-6 rounded-lg border flex items-center justify-center transition-all ${
+            isDone ? 'bg-emerald-500 border-emerald-500 text-slate-950 font-bold' : 'border-slate-700 bg-slate-900'
+          }">
+            ${isDone ? '✓' : ''}
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          dayLogs[h.id] = !dayLogs[h.id];
+          saveState();
+          triggerHapticAndAudio(dayLogs[h.id]);
+          renderAll();
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    function renderMetrics() {
+      const grid = document.getElementById('metricsGrid');
+      grid.innerHTML = '';
+
+      if (!appState.metrics || appState.metrics.length === 0) {
+        grid.innerHTML = `<div class="col-span-2 text-center text-xs text-slate-500 py-3">No counters configured.</div>`;
+        return;
+      }
+
+      appState.metrics.forEach(m => {
+        const dayKey = `metric_${m.id}`;
+        if (appState.history[selectedDate] && appState.history[selectedDate][dayKey] !== undefined) {
+          m.currentVal = appState.history[selectedDate][dayKey];
+        } else {
+          m.currentVal = m.val || 0;
+        }
+
+        const pct = Math.min(100, Math.round((m.currentVal / (m.target || 1)) * 100));
+
+        const card = document.createElement('div');
+        card.className = 'bg-slate-850/90 rounded-2xl p-3 border border-slate-800 flex flex-col justify-between';
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-base">${m.emoji || '📊'}</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-400">${pct}%</span>
+          </div>
+
+          <div class="my-2">
+            <p class="text-[11px] font-medium text-slate-400">${escapeHtml(m.name)}</p>
+            <div class="flex items-baseline gap-1 mt-0.5">
+              <span class="text-base font-bold text-white font-mono">${m.currentVal}</span>
+              <span class="text-[10px] text-slate-500">/ ${m.target} ${m.unit}</span>
+            </div>
+            <div class="w-full h-1 bg-slate-800 rounded-full mt-1.5 overflow-hidden">
+              <div class="h-full bg-cyan-400 rounded-full transition-all duration-300" style="width: ${pct}%"></div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-1 pt-1 border-t border-slate-800/60">
+            <button data-action="dec" class="w-7 h-7 rounded-lg bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-300 flex items-center justify-center font-bold text-xs transition-colors">-</button>
+            <button data-action="inc" class="w-7 h-7 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 active:scale-95 text-emerald-400 flex items-center justify-center font-bold text-xs transition-colors">+</button>
+          </div>
+        `;
+
+        card.querySelector('[data-action="dec"]').addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateMetricVal(m.id, -m.step);
+        });
+        card.querySelector('[data-action="inc"]').addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateMetricVal(m.id, m.step);
+        });
+
+        grid.appendChild(card);
+      });
+    }
+
+    function updateMetricVal(metricId, delta) {
+      if (!appState.history[selectedDate]) appState.history[selectedDate] = {};
+      const dayKey = `metric_${metricId}`;
+      const metric = appState.metrics.find(x => x.id === metricId);
+      if (!metric) return;
+
+      let cur = appState.history[selectedDate][dayKey] !== undefined 
+        ? appState.history[selectedDate][dayKey] 
+        : metric.val || 0;
+      
+      cur = Math.max(0, Math.round((cur + delta) * 10) / 10);
+      appState.history[selectedDate][dayKey] = cur;
+      saveState();
+      triggerHapticAndAudio(delta > 0);
+      renderMetrics();
+      updateCanvaSummary();
+    }
+
+    function renderTasks() {
+      const container = document.getElementById('tasksList');
+      const badge = document.getElementById('taskCountBadge');
+      container.innerHTML = '';
+
+      const pending = appState.tasks.filter(t => !t.done).length;
+      badge.textContent = `${pending} pending`;
+
+      if (appState.tasks.length === 0) {
+        container.innerHTML = `<p class="text-[11px] text-slate-500 italic p-1">No tasks for today. Add one above!</p>`;
+        return;
+      }
+
+      appState.tasks.forEach(t => {
+        const item = document.createElement('div');
+        item.className = 'flex items-center justify-between p-2 rounded-xl bg-slate-850/60 border border-slate-800/80 hover:border-slate-700/80 transition-colors';
+        item.innerHTML = `
+          <div class="flex items-center gap-2.5 flex-1 min-w-0">
+            <button data-task-id="${t.id}" class="task-checkbox w-4 h-4 rounded border flex items-center justify-center text-[10px] ${
+              t.done ? 'bg-emerald-500 border-emerald-500 text-slate-950 font-bold' : 'border-slate-600 bg-slate-900'
+            }">
+              ${t.done ? '✓' : ''}
+            </button>
+            <span class="text-xs truncate ${t.done ? 'line-through text-slate-500' : 'text-slate-200'}">${escapeHtml(t.title)}</span>
+          </div>
+          <button data-del-task="${t.id}" class="text-slate-500 hover:text-red-400 p-1 text-xs">✕</button>
+        `;
+
+        item.querySelector('.task-checkbox').addEventListener('click', () => {
+          t.done = !t.done;
+          saveState();
+          triggerHapticAndAudio(t.done);
+          renderTasks();
+          renderProgressRing();
+        });
+
+        item.querySelector('[data-del-task]').addEventListener('click', () => {
+          appState.tasks = appState.tasks.filter(x => x.id !== t.id);
+          saveState();
+          renderTasks();
+          renderProgressRing();
+        });
+
+        container.appendChild(item);
+      });
+    }
+
+    function renderProgressRing() {
+      const dayLogs = appState.history[selectedDate] || {};
+      const totalHabits = appState.habits.length;
+      let completedHabits = 0;
+      appState.habits.forEach(h => {
+        if (dayLogs[h.id]) completedHabits++;
+      });
+
+      const totalTasks = appState.tasks.length;
+      let completedTasks = appState.tasks.filter(t => t.done).length;
+
+      const totalItems = totalHabits + totalTasks;
+      const completedItems = completedHabits + completedTasks;
+
+      const pct = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
+
+      document.getElementById('progressPercentText').textContent = `${pct}%`;
+      document.getElementById('progressRatioText').textContent = `${completedItems} / ${totalItems} completed`;
+      document.getElementById('progressBarFill').style.width = `${pct}%`;
+
+      const circle = document.getElementById('progressCircleSvg');
+      const offset = 150.79 - (150.79 * pct) / 100;
+      circle.style.strokeDashoffset = offset;
+
+      const streak = calculateOverallStreak();
+      document.getElementById('currentStreakNum').textContent = streak;
+    }
+
+    function renderDailyNote() {
+      const textarea = document.getElementById('dailyNoteTextarea');
+      textarea.value = (appState.notes && appState.notes[selectedDate]) || '';
+    }
+
+    function calculateHabitStreak(habitId) {
+      let streak = 0;
+      const d = new Date();
+      while (true) {
+        const key = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        if (appState.history[key] && appState.history[key][habitId]) {
+          streak++;
+          d.setDate(d.getDate() - 1);
+        } else {
+          if (streak === 0 && key === getTodayString()) {
+            d.setDate(d.getDate() - 1);
+            continue;
+          }
+          break;
+        }
+      }
+      return streak;
+    }
+
+    function calculateOverallStreak() {
+      let streak = 0;
+      const d = new Date();
+      while (true) {
+        const key = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        const logs = appState.history[key] || {};
+        const count = appState.habits.filter(h => logs[h.id]).length;
+        if (count >= Math.max(1, Math.floor(appState.habits.length * 0.5))) {
+          streak++;
+          d.setDate(d.getDate() - 1);
+        } else {
+          if (streak === 0 && key === getTodayString()) {
+            d.setDate(d.getDate() - 1);
+            continue;
+          }
+          break;
+        }
+      }
+      return streak;
+    }
+
+    function renderAnalytics() {
+      const ctx = document.getElementById('weeklyChart');
+      if (!ctx) return;
+
+      const labels = [];
+      const dataPoints = [];
+      const cur = new Date();
+
+      for (let i = 6; i >= 0; i--) {
+        const d = new Date(cur);
+        d.setDate(cur.getDate() - i);
+        const key = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        labels.push(d.toLocaleDateString('en-US', { weekday: 'narrow' }));
+        
+        const logs = appState.history[key] || {};
+        const done = appState.habits.filter(h => logs[h.id]).length;
+        const total = appState.habits.length || 1;
+        dataPoints.push(Math.round((done / total) * 100));
+      }
+
+      if (weeklyChartInstance) {
+        weeklyChartInstance.destroy();
+      }
+
+      weeklyChartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Completion %',
+            data: dataPoints,
+            backgroundColor: dataPoints.map(p => p >= 80 ? '#10b981' : p >= 40 ? '#06b6d4' : '#334155'),
+            borderRadius: 6,
+            borderSkipped: false
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              grid: { color: 'rgba(51, 65, 85, 0.3)' },
+              ticks: { color: '#64748b', font: { family: 'monospace', size: 9 }, callback: v => v + '%' }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#94a3b8', font: { weight: 'bold' } }
+            }
+          }
+        }
+      });
+
+      const streaksBox = document.getElementById('streaksContainer');
+      streaksBox.innerHTML = '';
+      const sorted = [...appState.habits].map(h => ({
+        ...h,
+        streak: calculateHabitStreak(h.id)
+      })).sort((a,b) => b.streak - a.streak);
+
+      sorted.forEach(s => {
+        const row = document.createElement('div');
+        row.className = 'flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800 text-xs';
+        row.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span>${s.emoji || '⚡'}</span>
+            <span class="font-medium text-slate-200">${escapeHtml(s.title)}</span>
+          </div>
+          <span class="font-mono font-bold ${s.streak > 0 ? 'text-amber-400' : 'text-slate-500'}">
+            🔥 ${s.streak} days
+          </span>
+        `;
+        streaksBox.appendChild(row);
+      });
+
+      updateCanvaSummary();
+    }
+
+    function updateCanvaSummary() {
+      const summaryBox = document.getElementById('canvaSummaryBox');
+      if (!summaryBox) return;
+
+      const dayLogs = appState.history[selectedDate] || {};
+      const completedHabits = appState.habits.filter(h => dayLogs[h.id]).length;
+      const streak = calculateOverallStreak();
+      
+      let lines = [];
+      lines.push(`📅 DATE: ${selectedDate}`);
+      lines.push(`🎯 OVERALL SCORE: ${completedHabits}/${appState.habits.length} Habits Done`);
+      lines.push(`🔥 CURRENT STREAK: ${streak} Days`);
+      lines.push(`\n--- METRIC LOGS ---`);
+      appState.metrics.forEach(m => {
+        const val = (dayLogs[`metric_${m.id}`] !== undefined) ? dayLogs[`metric_${m.id}`] : m.val;
+        lines.push(`• ${m.name}: ${val} / ${m.target} ${m.unit}`);
+      });
+      lines.push(`\n--- HABIT CHECKLIST ---`);
+      appState.habits.forEach(h => {
+        lines.push(`${dayLogs[h.id] ? '[✓]' : '[ ]'} ${h.title}`);
+      });
+
+      summaryBox.textContent = lines.join('\n');
+    }
+
+    function renderManageItems() {
+      const list = document.getElementById('manageItemsList');
+      list.innerHTML = '';
+      appState.habits.forEach(h => {
+        const row = document.createElement('div');
+        row.className = 'flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800 text-xs';
+        row.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span>${h.emoji}</span>
+            <span class="text-slate-200 font-medium">${escapeHtml(h.title)}</span>
+          </div>
+          <button data-del-habit="${h.id}" class="text-slate-500 hover:text-red-400 p-1">Delete</button>
+        `;
+        row.querySelector('[data-del-habit]').addEventListener('click', () => {
+          appState.habits = appState.habits.filter(x => x.id !== h.id);
+          saveState();
+          renderManageItems();
+          renderHabits();
+          renderProgressRing();
+        });
+        list.appendChild(row);
+      });
+    }
+
+    const PRESETS = {
+      wellness: {
+        habits: [
+          { id: 'h1', title: '7+ Hours Quality Sleep', emoji: '💤', category: 'Health' },
+          { id: 'h2', title: 'Morning Sunlight & Walk', emoji: '☀️', category: 'Health' },
+          { id: 'h3', title: '3 Liters Hydration', emoji: '💧', category: 'Health' },
+          { id: 'h4', title: 'Healthy Whole Food Diet', emoji: '🥗', category: 'Health' },
+          { id: 'h5', title: '15-Min Meditation / Breathwork', emoji: '🧘', category: 'Mind' }
+        ],
+        metrics: [
+          { id: 'm1', name: 'Water', emoji: '💧', unit: 'Glasses', val: 7, target: 10, step: 1 },
+          { id: 'm2', name: 'Sleep', emoji: '🌙', unit: 'Hours', val: 7.5, target: 8.0, step: 0.5 },
+          { id: 'm3', name: 'Steps', emoji: '👟', unit: 'Steps', val: 8500, target: 10000, step: 500 }
+        ]
+      },
+      productivity: {
+        habits: [
+          { id: 'h1', title: 'Review Top 3 Goals', emoji: '🎯', category: 'Productivity' },
+          { id: 'h2', title: '2 Hours Deep Focus Block', emoji: '⚡', category: 'Productivity' },
+          { id: 'h3', title: 'Inbox & Notifications Zero', emoji: '📬', category: 'Productivity' },
+          { id: 'h4', title: 'Skill Building / Coding', emoji: '💻', category: 'Mind' }
+        ],
+        metrics: [
+          { id: 'm1', name: 'Deep Work', emoji: '⚡', unit: 'Hours', val: 3.0, target: 5.0, step: 0.5 },
+          { id: 'm2', name: 'Tasks Completed', emoji: '✅', unit: 'Tasks', val: 4, target: 6, step: 1 }
+        ]
+      },
+      academic: {
+        habits: [
+          { id: 'h1', title: 'Review Lecture Notes', emoji: '📝', category: 'Routine' },
+          { id: 'h2', title: 'Problem Sets & Practice', emoji: '📐', category: 'Productivity' },
+          { id: 'h3', title: 'Active Recall / Flashcards', emoji: '🧠', category: 'Mind' }
+        ],
+        metrics: [
+          { id: 'm1', name: 'Study Time', emoji: '📚', unit: 'Hours', val: 2.5, target: 4.0, step: 0.5 },
+          { id: 'm2', name: 'Pages Read', emoji: '📖', unit: 'Pages', val: 15, target: 30, step: 5 }
+        ]
+      },
+      minimal: {
+        habits: [
+          { id: 'h1', title: 'Core Priority Execution', emoji: '🎯', category: 'Productivity' },
+          { id: 'h2', title: '30-Min Physical Exercise', emoji: '🏃', category: 'Health' },
+          { id: 'h3', title: 'Daily Wind-down & Rest', emoji: '🌙', category: 'Mind' }
+        ],
+        metrics: [
+          { id: 'm1', name: 'Key Habit Count', emoji: '🔥', unit: 'Done', val: 2, target: 3, step: 1 }
+        ]
+      }
+    };
+
+    function loadPreset(key) {
+      if (!PRESETS[key]) return;
+      openConfirmDialog(
+        'Load Template Preset',
+        'Load this tracker preset? Your active habits and counters will be updated to match this layout.',
+        () => {
+          appState.habits = JSON.parse(JSON.stringify(PRESETS[key].habits));
+          appState.metrics = JSON.parse(JSON.stringify(PRESETS[key].metrics));
+          saveState();
+          renderAll();
+          renderManageItems();
+          showToast('Preset template loaded!');
+        }
+      );
+    }
+
+    function triggerCloudSync() {
+      if (!appState.webhookUrl) return;
+      try {
+        fetch(appState.webhookUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            timestamp: new Date().toISOString(),
+            date: selectedDate,
+            data: appState
+          })
+        }).catch(err => console.log('Webhook sync queued'));
+      } catch (e) {}
+    }
+
+    function exportJSON() {
+      const blob = new Blob([JSON.stringify(appState, null, 2)], { type: 'application/json' });
+      downloadBlob(blob, `canva-tracker-backup-${selectedDate}.json`);
+      showToast('Exported JSON backup');
+    }
+
+    function exportCSV() {
+      let rows = [['Date', 'Type', 'Item Title', 'Status/Value']];
+      Object.keys(appState.history).sort().forEach(date => {
+        const log = appState.history[date];
+        appState.habits.forEach(h => {
+          rows.push([date, 'Habit', `"${h.title}"`, log[h.id] ? 'Completed' : 'Missed']);
+        });
+        appState.metrics.forEach(m => {
+          const val = log[`metric_${m.id}`] !== undefined ? log[`metric_${m.id}`] : m.val;
+          rows.push([date, 'Metric', `"${m.name}"`, val]);
+        });
+      });
+
+      const csvContent = rows.map(e => e.join(',')).join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      downloadBlob(blob, `canva-tracker-data-${selectedDate}.csv`);
+      showToast('Exported CSV spreadsheet');
+    }
+
+    function downloadBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function renderAll() {
+      renderHabits();
+      renderMetrics();
+      renderTasks();
+      renderProgressRing();
+      renderDailyNote();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      function updateLiveClock() {
+        const now = new Date();
+        const hrs = String(now.getHours()).padStart(2, '0');
+        const mins = String(now.getMinutes()).padStart(2, '0');
+        const el = document.getElementById('liveClock');
+        if (el) el.textContent = `${hrs}:${mins}`;
+      }
+      updateLiveClock();
+      setInterval(updateLiveClock, 30000);
+
+      renderWeekStrip();
+      renderAll();
+
+      // Listen for Android PWA install prompt
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        const banner = document.getElementById('androidBanner');
+        if (banner) banner.classList.remove('hidden');
+      });
+
+      const androidModal = document.getElementById('modalAndroidInstall');
+      function showAndroidModal() {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(() => {
+            deferredPrompt = null;
+          });
+        } else {
+          androidModal.classList.remove('hidden');
+        }
+      }
+
+      document.getElementById('btnAndroidInstallTop').addEventListener('click', showAndroidModal);
+      document.getElementById('btnTriggerAndroidInstall').addEventListener('click', showAndroidModal);
+      document.getElementById('btnCloseAndroidModal').addEventListener('click', () => androidModal.classList.add('hidden'));
+      document.getElementById('btnDismissAndroidModal').addEventListener('click', () => androidModal.classList.add('hidden'));
+
+      // Tab Switching
+      const navButtons = document.querySelectorAll('.nav-btn');
+      const tabs = {
+        tabToday: document.getElementById('tabToday'),
+        tabAnalytics: document.getElementById('tabAnalytics'),
+        tabCustomize: document.getElementById('tabCustomize'),
+        tabSettings: document.getElementById('tabSettings')
+      };
+
+      navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetTab = btn.getAttribute('data-tab');
+          Object.keys(tabs).forEach(k => {
+            if (tabs[k]) tabs[k].classList.add('hidden');
+          });
+          if (tabs[targetTab]) tabs[targetTab].classList.remove('hidden');
+
+          navButtons.forEach(b => {
+            b.classList.remove('text-emerald-400');
+            b.classList.add('text-slate-400');
+          });
+          btn.classList.remove('text-slate-400');
+          btn.classList.add('text-emerald-400');
+
+          if (targetTab === 'tabAnalytics') renderAnalytics();
+          if (targetTab === 'tabCustomize') renderManageItems();
+        });
+      });
+
+      // FAB for quick habit add
+      const modal = document.getElementById('modalAddHabit');
+      document.getElementById('btnAndroidFab').addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        triggerHapticAndAudio(true);
+      });
+
+      // Quick Add Task Form
+      document.getElementById('formAddTask').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = document.getElementById('inputNewTask');
+        const text = input.value.trim();
+        if (!text) return;
+        appState.tasks.push({
+          id: 't_' + Date.now(),
+          title: text,
+          done: false,
+          priority: 'medium'
+        });
+        saveState();
+        input.value = '';
+        renderTasks();
+        renderProgressRing();
+        triggerHapticAndAudio(true);
+      });
+
+      // Daily Reflection Auto-Save
+      const noteInput = document.getElementById('dailyNoteTextarea');
+      let noteDebounce;
+      noteInput.addEventListener('input', () => {
+        clearTimeout(noteDebounce);
+        noteDebounce = setTimeout(() => {
+          if (!appState.notes) appState.notes = {};
+          appState.notes[selectedDate] = noteInput.value;
+          saveState();
+          const indicator = document.getElementById('noteSavedIndicator');
+          indicator.classList.remove('opacity-0');
+          setTimeout(() => indicator.classList.add('opacity-0'), 1500);
+        }, 500);
+      });
+
+      document.getElementById('btnOpenAddHabit').addEventListener('click', () => modal.classList.remove('hidden'));
+      document.getElementById('btnOpenNewItemSheet').addEventListener('click', () => modal.classList.remove('hidden'));
+      document.getElementById('btnCloseAddHabit').addEventListener('click', () => modal.classList.add('hidden'));
+
+      document.getElementById('formAddHabit').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const title = document.getElementById('inputHabitTitle').value.trim();
+        const emoji = document.getElementById('inputHabitEmoji').value.trim() || '⚡';
+        const category = document.getElementById('selectHabitCategory').value;
+        if (!title) return;
+
+        appState.habits.push({
+          id: 'h_' + Date.now(),
+          title,
+          emoji,
+          category
+        });
+        saveState();
+        modal.classList.add('hidden');
+        document.getElementById('formAddHabit').reset();
+        renderHabits();
+        renderProgressRing();
+        renderManageItems();
+        showToast('New habit added!');
+        triggerHapticAndAudio(true);
+      });
+
+      document.querySelectorAll('.preset-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const presetKey = btn.getAttribute('data-preset');
+          loadPreset(presetKey);
+        });
+      });
+
+      document.getElementById('btnCopyCanvaSummary').addEventListener('click', () => {
+        const text = document.getElementById('canvaSummaryBox').textContent;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => {
+            showToast('Copied summary to clipboard!');
+            triggerHapticAndAudio(true);
+          }).catch(() => fallbackCopy(text));
+        } else {
+          fallbackCopy(text);
+        }
+      });
+
+      function fallbackCopy(text) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+          showToast('Copied summary to clipboard!');
+          triggerHapticAndAudio(true);
+        } catch (e) {
+          showToast('Failed to copy');
+        }
+        document.body.removeChild(ta);
+      }
+
+      const webhookInput = document.getElementById('inputWebhookUrl');
+      webhookInput.value = appState.webhookUrl || '';
+      document.getElementById('btnSaveWebhook').addEventListener('click', () => {
+        appState.webhookUrl = webhookInput.value.trim();
+        saveState();
+        showToast('Webhook endpoint saved');
+      });
+
+      document.getElementById('btnExportJSON').addEventListener('click', exportJSON);
+      document.getElementById('btnExportCSV').addEventListener('click', exportCSV);
+      document.getElementById('btnQuickExportTop').addEventListener('click', exportCSV);
+
+      document.getElementById('btnResetAllData').addEventListener('click', () => {
+        openConfirmDialog(
+          'Reset All Data',
+          'Are you sure you want to erase all tracking history? This cannot be undone.',
+          () => {
+            appState = JSON.parse(JSON.stringify(DEFAULT_DATA));
+            saveState();
+            renderWeekStrip();
+            renderAll();
+            showToast('Data reset to default');
+          },
+          true
+        );
+      });
+
+      document.getElementById('btnThemeToggle').addEventListener('click', () => {
+        appState.soundEnabled = !appState.soundEnabled;
+        saveState();
+        showToast(appState.soundEnabled ? 'Audio feedback: On' : 'Audio feedback: Off');
+      });
+
+      const appContainer = document.getElementById('appContainer');
+      const phoneShell = document.getElementById('phoneShell');
+      const btnViewPhone = document.getElementById('btnViewPhone');
+      const btnViewFluid = document.getElementById('btnViewFluid');
+
+      btnViewPhone.addEventListener('click', () => {
+        appContainer.classList.remove('max-w-4xl');
+        appContainer.classList.add('max-w-md');
+        phoneShell.classList.add('phone-mockup');
+        phoneShell.classList.remove('rounded-2xl', 'border-0');
+        btnViewPhone.classList.add('text-emerald-400', 'bg-slate-900');
+        btnViewPhone.classList.remove('text-slate-400');
+        btnViewFluid.classList.remove('text-emerald-400', 'bg-slate-900');
+        btnViewFluid.classList.add('text-slate-400');
+      });
+
+      btnViewFluid.addEventListener('click', () => {
+        appContainer.classList.remove('max-w-md');
+        appContainer.classList.add('max-w-4xl');
+        phoneShell.classList.remove('phone-mockup');
+        phoneShell.classList.add('rounded-2xl');
+        btnViewFluid.classList.add('text-emerald-400', 'bg-slate-900');
+        btnViewFluid.classList.remove('text-slate-400');
+        btnViewPhone.classList.remove('text-emerald-400', 'bg-slate-900');
+        btnViewPhone.classList.add('text-slate-400');
+      });
+
+      document.getElementById('btnTodayResetModal').addEventListener('click', () => {
+        modal.classList.remove('hidden');
+      });
+    });
+  </script>
+</body>
+</html>

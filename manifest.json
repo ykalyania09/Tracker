@@ -1,0 +1,29 @@
+{
+  "name": "Canva Tracker Pro",
+  "short_name": "TrackerPro",
+  "description": "Minimal, sharp Android companion app for your Canva tracker",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070a12",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "productivity",
+    "health",
+    "lifestyle"
+  ]
+}
